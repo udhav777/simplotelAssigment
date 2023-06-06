@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+/* navBar */
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: #fff;
+  z-index: 2;
+}
+header ul {
+  width: 70%;
+  margin: 0 15%;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+  letter-spacing: 3px;
+}
+ul li a {
+  color: black;
+  text-transform: capitalize;
+}
+.logo {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+.logo img {
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+}
+input {
+  display: none;
+}
+.hambarger {
+  display: none;
+}
+.hambarger .list {
+  width: 22px;
+  height: 3px;
+  background-color: black;
+  margin: 6px 0px;
+  cursor: pointer;
+}
+/* Hero section*/
+
+section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(236, 87, 152),
+    rgb(249, 249, 100)
+  );
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.container img {
+  width: 100%;
+  max-height: 100vh;
+}
+
+.container-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  background-color: rgba(241, 110, 132, 0.7);
+  width: 40%;
+  color: white;
+  overflow: hidden;
+  padding: 3rem;
+  font-family: Arial;
+}
+
+.container-text h1 {
+  font-size: 2rem;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+}
+.container p {
+  letter-spacing: 1px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.919);
+}
+
+/* Footer section*/
+.footer {
+  width: 100%;
+
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    rgb(236, 87, 152),
+    rgb(249, 249, 100)
+  );
+}
+.footer h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  letter-spacing: 3px;
+  padding-top: 20px;
+  font-family: sans-serif;
+}
+.cards {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.card {
+  width: 250px;
+  height: 330px;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0px 50px 0px 50px;
+  cursor: pointer;
+}
+.card h4 {
+  text-align: center;
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-family: "Verdana";
+  font-weight: 900;
+}
+
+.card p {
+  text-align: center;
+  margin-top: 6px;
+  padding: 15px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+.card img {
+  width: 220px;
+  height: 220px;
+  border-radius: 0px 50px 0px 0px;
+  padding-top: 15px;
+}
+.btn {
+  margin-top: 60px;
+  text-align: center;
+}
+button {
+  padding: 14px 50px;
+  border-radius: 30px;
+  color: #111;
+  background-color: rgb(244, 242, 225, 0.4);
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media screen and (max-width: 900px) {
+  .hambarger {
+    display: block;
+    position: absolute;
+    left: 30px;
+    top: 10px;
+  }
+  .logo {
+    position: absolute;
+    top: 12px;
+    right: 60px;
+  }
+  header ul {
+    width: 100%;
+    margin: 0;
+  }
+  nav ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    display: block;
+    height: 100vh;
+    left: -100%;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in;
+    background-color: rgba(255, 255, 255);
+    cursor: pointer;
+    z-index: 1;
+  }
+  nav ul li {
+    margin: 40px 0;
+  }
+  #click:checked ~ ul {
+    left: 0;
+    top: 50px;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  ul li a {
+    color: #111;
+    text-transform: capitalize;
+    font-size: 22px;
+
+    font-weight: 300;
+  }
+
+  #click {
+    display: none;
+  }
+  section {
+    width: 100%;
+    height: auto;
+  }
+  .footer {
+    height: auto;
+  }
+  .container-text {
+    padding: 2rem;
+  }
+
+  .container-text h1 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .container p {
+    font-size: smaller;
+    padding: 0;
+    letter-spacing: normal;
+  }
+  .cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .btn {
+    margin-top: 30px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container-text {
+    top: 30%;
+    width: 60%;
+
+    padding: 1rem;
+  }
+
+  .container-text h1 {
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  .container p {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container-text {
+    width: 60%;
+    height: 60%;
+  }
+}
